@@ -21,7 +21,7 @@ STATEVARIABLEFILTER_DPF_BUNDLES = d_statevariablefilter.lv2
 
 # call make with the current arguments and path. "$(@D)" is the build directory.
 STATEVARIABLEFILTER_DPF_HOST_MAKE   = $(HOST_MAKE_ENV)   $(HOST_CONFIGURE_OPTS)   $(MAKE) -C $(@D)
-STATEVARIABLEFILTER_DPF_TARGET_MAKE = $(TARGET_MAKE_ENV) $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D)
+STATEVARIABLEFILTER_DPF_TARGET_MAKE = $(TARGET_MAKE_ENV) $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) nottl
 
 # temp dir where we place the generated ttls
 STATEVARIABLEFILTER_DPF_TMP_DIR = $(HOST_DIR)/tmp-StateVariableFilter-DPF

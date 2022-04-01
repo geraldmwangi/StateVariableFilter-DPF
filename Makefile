@@ -10,6 +10,8 @@ all: libs plugins gen
 
 # --------------------------------------------------------------
 
+nottl: libs plugins
+
 libs:
 ifeq ($(HAVE_DGL),true)
 	$(MAKE) -C DPF/dgl
@@ -41,5 +43,7 @@ endif
 
 
 # --------------------------------------------------------------
-
+install:
+	install -d $(DESTDIR)/usr/lib/lv2
+	cp -r bin/*.lv2 $(DESTDIR)/usr/lib/lv2/
 .PHONY: plugins
