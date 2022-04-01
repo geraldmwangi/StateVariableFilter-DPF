@@ -16,7 +16,6 @@ StateVariableFilter::StateVariableFilter():
 void StateVariableFilter::initParameter(uint32_t index, Parameter &parameter)
 {
 
-    m_cutoff=1000.0;
     if(index==0)
     {
         parameter.name="CutOff";
