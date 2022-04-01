@@ -23,12 +23,12 @@ endif
 # Set build and link flags
 
 BASE_FLAGS = -Wall -Wextra -pipe
-BASE_OPTS  = -O2 -ffast-math -mtune=generic -msse -msse2 -fdata-sections -ffunction-sections
+BASE_OPTS  = -O2 -ffast-math  -fdata-sections -ffunction-sections
 
-ifneq ($(MACOS),true)
+#ifneq ($(MACOS),true)
 # MacOS doesn't support this
-BASE_OPTS += -mfpmath=sse
-endif
+#BASE_OPTS += -mfpmath=sse
+#endif
 
 ifeq ($(MACOS),true)
 # MacOS linker flags
